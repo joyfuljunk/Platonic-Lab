@@ -1,120 +1,173 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>⭐Platonic Lab⭐</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⭐Platonic Lab⭐</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f6fa;
-      color: #333;
-    }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f6fa;
+    color: #333;
+}
 
-    header {
-      background: #4a69bd;
-      color: white;
-      padding: 40px;
-      text-align: center;
-    }
+header {
+    background: #4a69bd;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
 
-    section {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-    }
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
 
-    .intro {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
+.intro {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
+.links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: 0.2s;
+    display: block;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    background: #4a69bd;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.submenu a {
+    background: white;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.submenu a:hover {
+    background: #4a69bd;
+    color: white;
+}
+
+.dropdown:hover .submenu {
+    display: flex;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+}
+
+@media (max-width: 700px) {
     .links {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
-
-    .box {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: 0.2s;
-    }
-
-    .box:hover {
-      transform: translateY(-5px);
-      background: #4a69bd;
-      color: white;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: gray;
-    }
-
-    @media (max-width: 600px) {
-      .links {
         grid-template-columns: 1fr;
-      }
     }
-  </style>
+
+    .submenu {
+        position: static;
+        margin-top: 10px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
+<header>
     <h1>⭐Platonic Lab⭐</h1>
     <p></p>
-  </header>
+</header>
 
-  <section>
+<section>
 
-     <div class="links">
-      <a class="box" href="https://joyfuljunk.github.io/explore/" target="_blank">
-        Explore Platonic Solids
-      </a>
+    <div class="intro">
+        <h2>Platonic Solids</h2>
+        <p>
+            Platonic solids are a 3d shape where every face is an identical regular polygon, and the exact same number of faces meet at every corner. 
+
+        </p>
+    </div>
+
+    <div class="links">
+
+        <a class="box" href="https://joyfuljunk.github.io/explore/" target="_blank">
+            🌐Explore Platonic Solids
+        </a>
 
         <div class="dropdown">
 
             <div class="box">
-                Quizzes
+                ❓Quizzes
             </div>
 
             <div class="submenu">
                 <a href="https://joyfuljunk.github.io/Quiz./" target="_blank">
-                    Matching Names
+                    Name Quiz
                 </a>
 
                 <a href="https://joyfuljunk.github.io/Quiz/" target="_blank">
-                    Matching Faces, Vertices, Edges
+                    Face, Edge, Vertices Quiz
                 </a>
             </div>
 
         </div>
 
+        <a class="box" href="https://joyfuljunk.github.io/Platonic-Solid-Nets/" target="_blank">
+            ⏹️Platonic Solid Nets
+        </a>
 
-      <a class="box" href="https://joyfuljunk.github.io/Platonic-Solid-Nets/" target="_blank">
-        Platonic solid Nets
-      </a>
     </div>
 
-  </section>
+</section>
 
-  <footer>
+<footer>
     © 2026platoniclab
-  </footer>
+</footer>
 
 </body>
 </html>
+
 
